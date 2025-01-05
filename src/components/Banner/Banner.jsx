@@ -1,4 +1,5 @@
 import banner from '../../assets/image/2.png';
+import TypeIt from "typeit-react";
 
 const Banner = () => {
   return (
@@ -14,16 +15,44 @@ const Banner = () => {
       {/* Content */}
       <div className="pt-24 lg:pt-0 px-2">
       <div className="w-full justify-center mx-auto text-center text-black">
-  <p className="text-sm font-semibold uppercase mb-2 max-w-sm mx-auto text-center justify-center text-[#a42dff] bg-gradient-to-r from-[#2216cd]/10 via-[#7768ff]/10 to-[#cb78ff]/10 py-1 px-6 rounded-full animate-gradient-signal bg-[length:200%_200%] ">
+  <p className="text-sm font-semibold uppercase mb-3 max-w-sm mx-auto text-center justify-center text-[#a42dff] bg-gradient-to-r from-[#2216cd]/10 via-[#7768ff]/10 to-[#cb78ff]/10 py-1 px-6 rounded-full animate-gradient-signal bg-[length:200%_200%] ">
     Next-generation of AI Images
   </p>
-  <h1 className="text-3xl md:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#5316cd] via-[#0978ff] to-[#d75eff] animate-gradient animate-gradient-signal bg-[length:200%_200%]">
-    Unleash Your Imagination with <br /> AI-Generated Art
+  <h1 className="text-3xl md:text-5xl font-bold  capitalize pb-1 text-transparent leading-6 bg-clip-text bg-gradient-to-r from-[#f86bff] via-[#0978ff] to-[#d75eff] animate-gradient animate-gradient-signal bg-[length:200%_200%]">
+    Unleash Your Imagination with <br /> 
+    <TypeIt
+  options={{
+    loop: true,
+    cursor: true, // Ensure the cursor is enabled
+    cursorChar: "|", // Define the cursor character
+  }}
+  getBeforeInit={(instance) => {
+    instance
+      .type("Mars AI")
+      .pause(1000)
+      .delete()
+      .type("Dall-E 2")
+      .pause(1000)
+      .delete()
+      .type("Midjourney")
+      .pause(1000)
+      .delete()
+      .type("NightCafe")
+      .pause(1000)
+      .delete()
+      .type("Craiyon");
+    return instance
+  }}
+/>
+
+
   </h1>
 
-  <p className="mt-4 text-gray-600 pb-5 text-[13px] md:text-lg max-w-md  mx-auto text-center justify-center">
+  <p className="mt-2 text-gray-600 pb-5 text-[13px] md:text-lg max-w-md  mx-auto text-center justify-center">
     Cost-effective solution to generate powerful AI photos and art generation. What will you create?
   </p>
+  
+
 </div>
 
       </div>

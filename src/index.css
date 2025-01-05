@@ -21,3 +21,17 @@
   background-color: #666e75;
   border-radius: 5px;
 }
+
+.typeit-cursor {
+    color: #000; /* Change to your desired color */
+    font-size: 1em; /* Adjust size if necessary */
+    font-weight: bold;
+    animation: blink 1s step-end infinite; /* Add blinking effect */
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0; /* Make the cursor blink */
+    }
+  }
+  
