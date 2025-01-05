@@ -1,28 +1,20 @@
 
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Layout from './components/Layout/Layout';
 
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className='text-red-500 text-9xl'>Vite + React</h1>
-      
-      <p className="read-the-docs text-4xl bg-red-800">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+      <Route  element={<Layout />} >
+      <Route index element={<Home />} /> 
+      </Route>
+       
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
