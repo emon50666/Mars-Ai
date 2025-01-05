@@ -14,6 +14,16 @@ export default {
         cardhover: '0 0 1px 0 rgba(189,192,207,0.06),0 10px 16px -1px rgba(189,192,207,0.4)',
       },
     },
+    animation: {
+      'gradient-signal': 'gradientSignal 3s ease infinite',
+    },
+    keyframes: {
+      gradientSignal: {
+        '0%': { backgroundPosition: '0% 50%' },
+        '50%': { backgroundPosition: '100% 50%' },
+        '100%': { backgroundPosition: '0% 50%' },
+      },
+    },
   },
   plugins: [],
 

@@ -1,8 +1,11 @@
+import Banner from "../components/Banner/banner";
 
 const Home = () => {
     return (
-        <div>
-            this is a home page
+        <div className=" ">
+          <div className="relative  bottom-20">
+          <Banner/>
+          </div>
         </div>
     );
 };
