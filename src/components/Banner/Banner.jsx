@@ -18,8 +18,8 @@ const Banner = () => {
   <p className="text-sm font-semibold uppercase mb-3 max-w-sm mx-auto text-center justify-center text-[#a42dff] bg-gradient-to-r from-[#2216cd]/10 via-[#7768ff]/10 to-[#cb78ff]/10 py-1 px-6 rounded-full animate-gradient-signal bg-[length:200%_200%] ">
     Next-generation of AI Images
   </p>
-  <h1 className="text-3xl md:text-6xl font-extrabold   capitalize pb-1 text-transparent leading-6 bg-clip-text bg-gradient-to-r from-[#f86bff] via-[#0978ff] to-[#d75eff] animate-gradient animate-gradient-signal bg-[length:200%_200%]">
-    Unleash Your Imagination with <br /> 
+  <h1 className="text-3xl md:text-6xl font-extrabold   capitalize pb-1 text-transparent sm:leading-0 leading-6 bg-clip-text bg-gradient-to-r from-[#f86bff] via-[#0978ff] to-[#d75eff] animate-gradient animate-gradient-signal bg-[length:200%_200%]">
+    Unleash Your  Imagination <br /> <span className='mr-2'>with</span> 
     <TypeIt
   options={{
     loop: true,
