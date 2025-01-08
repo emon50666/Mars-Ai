@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Layout from './components/Layout/Layout';
+import CreatePost from './pages/CreatePost';
 
 
 const App = () => {
@@ -10,9 +11,11 @@ const App = () => {
       <Routes>
       <Route  element={<Layout />} >
       <Route index element={<Home />} /> 
+      <Route path={'/create-post'} element={<CreatePost/>} />
       </Route>
-       
+     
       </Routes>
+      
     </Router>
   );
 };

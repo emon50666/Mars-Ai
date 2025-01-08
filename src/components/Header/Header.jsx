@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/image/log.png'
 
 const Header = () => {
@@ -8,11 +9,11 @@ const Header = () => {
                 <img src={logo} alt="Mars Ai" className='w-24 h-10' />
             </div>
             <div>
-                <button
+                <Link to={'/create-post'}
                     className="bg-gradient-to-r from-[#2216cd] via-[#7768ff] to-[#cb78ff] text-white py-1 px-6 rounded-full animate-gradient-signal bg-[length:200%_200%]"
                 >
                     Create
-                </button>
+                </Link>
 
 
             </div>
