@@ -5,7 +5,7 @@ const FormField = ({name,labelName,value,handelChange,isSurpriseMe,handelSurpris
         <div>
             <div className="">
                
-                <div className="flex  items-center gap-3 mb-2">
+                <div className=" flex   ">
                 <label className="block text-sm font-medium text-gray-800" htmlFor={name}>
                     {labelName}
                 </label>
@@ -13,7 +13,7 @@ const FormField = ({name,labelName,value,handelChange,isSurpriseMe,handelSurpris
                     <button
                     type="button"
                     onClick={handelSurpriseMe}
-                    className="py1 px-3 font-normal border rounded-lg bg-gray-50 border-gray-200"
+                    className="  font-normal border relative bottom-3 px-2 rounded-lg bg-purple-50 border-gray-200"
                     >Generate Promt</button>
                 )}
                 </div>
@@ -21,11 +21,11 @@ const FormField = ({name,labelName,value,handelChange,isSurpriseMe,handelSurpris
                 name={name}
                 id={name}
                 placeholder={placeholder}
-                value={value}
                 onChange={handelChange}
+                value={value}
                 required
-
-                />
+                className="border  w-full py-2 px-2  rounded-md outline-none border-gray-300"
+/>
             </div>
 
         </div>
