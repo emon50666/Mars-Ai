@@ -4,7 +4,7 @@ import TypeIt from "typeit-react";
 const Banner = () => {
   return (
     <div
-      className="relative -z-10   w-full h-screen bg-cover bg-center justify-center flex items-center"
+      className="relative -z-10   w-full h-screen  bg-center justify-center flex items-center"
       style={{
         backgroundImage: `url(${banner})`,
       }}
