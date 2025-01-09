@@ -16,6 +16,7 @@ export default {
     },
     animation: {
       'gradient-signal': 'gradientSignal 3s ease infinite',
+      "animation":'animate-spin'
     },
     keyframes: {
       gradientSignal: {

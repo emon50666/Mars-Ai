@@ -8,7 +8,7 @@ const Home = () => {
   const [allPost, setAllPost] = useState(null)
   const [searchText, setSearchText] = useState('')
   return (
-    <div className=" max-w-7xl">
+    <div className=" ">
       <div className="">
         <Banner />
       </div>
