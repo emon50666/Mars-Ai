@@ -4,13 +4,15 @@ import TypeIt from "typeit-react";
 const Banner = () => {
   return (
     <div
-      className="relative -z-10   w-full h-screen  bg-center justify-center flex items-center"
+      className="relative -z-10   w-full h-screen   bg-center justify-center flex items-center"
       style={{
         backgroundImage: `url(${banner})`,
       }}
     >
       {/* Overlay */}
-      
+      {/* <div className='absolute inset-0 bg-black z-10 opacity-30'>
+
+      </div> */}
 
       {/* Content */}
       <div className="pt-24 lg:pt-0 px-2">

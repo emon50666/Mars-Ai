@@ -5,6 +5,7 @@ import { useState } from "react";
 import cdn from "../assets/image/cdn.png";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { RiAiGenerate2 } from "react-icons/ri";
+import PostBanner from "../components/PostBanner";
 
 const CreatePost = () => {
   const navigate = useNavigate();
@@ -35,8 +36,10 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="pt-20  px-2 lg:px-0 container mx-auto min-h-[calc(100vh-73px)]">
-      <h1 className="text-2xl font-bold mb-6">Create Post</h1>
+   <>
+    <PostBanner/>
+
+    <div className="pt-10  px-2 lg:px-0 container mx-auto min-h-[calc(100vh-73px)]">
 
       {/* Main Form Layout */}
       <div className="flex flex-col md:flex-row gap-10">
@@ -88,7 +91,7 @@ const CreatePost = () => {
         {/* Right Section: Image Preview and Buttons */}
         <div className="flex flex-col items-center gap-6 w-full md:w-1/2">
           {/* Image Preview */}
-          <div className="relative border rounded-md w-full max-w-md h-64 flex items-center justify-center">
+          <div className="relative border border-dotted border-gray-300 rounded-md w-full max-w-md h-64 flex items-center justify-center">
             {form?.photo ? (
               <img
                 src={form?.photo}
@@ -99,7 +102,7 @@ const CreatePost = () => {
               <img
                 src={cdn}
                 alt="Preview"
-                className="w-full h-full object-contain opacity-40"
+                className="w-full h-full object-contain opacity-30"
               />
             )}
             {generatingImg && (
@@ -113,6 +116,7 @@ const CreatePost = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 
