@@ -1,6 +1,7 @@
 import { RiAiGenerate2 } from 'react-icons/ri';
 import banner from '../../assets/image/la.png';
 import TypeIt from "typeit-react";
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
@@ -62,13 +63,15 @@ const Banner = () => {
 
         </div>
         <div className=" ">
-          <button
+         <Link o={'/generate-image'}>
+         <button
            
-            className=" flex items-center gap-2 bg-gradient-to-r from-[#703192e2] via-[#ee34ff] to-[#190438] text-white py-2 px-6 rounded-md animate-gradient-signal bg-[length:200%_200%]"
-          >
-            <RiAiGenerate2 /> Generate Image
-          </button>
-          
+           className=" flex items-center gap-2 bg-gradient-to-r from-[#703192e2] via-[#ee34ff] to-[#190438] text-white py-2 px-6 rounded-md animate-gradient-signal bg-[length:200%_200%]"
+         >
+           <RiAiGenerate2 /> Generate Image
+         </button>
+         
+         </Link>
         </div>
       </div>
     </div>
