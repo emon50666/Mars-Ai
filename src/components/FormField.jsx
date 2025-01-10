@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 
 const FormField = ({ name, labelName, value, handelChange, isSurpriseMe, handelSurpriseMe, placeholder, type }) => {
     return (
@@ -32,16 +32,5 @@ const FormField = ({ name, labelName, value, handelChange, isSurpriseMe, handelS
     );
 };
 
-FormField.propTypes = {
-    name: PropTypes.string,
-    labelName: PropTypes.string,
-    value: PropTypes.string,
-    handelChange: PropTypes.function,
-    isSurpriseMe: PropTypes.function,
-    handelSurpriseMe: PropTypes.function,
-    placeholder: PropTypes.string,
-    type: PropTypes.string,
 
-
-};
 export default FormField;
