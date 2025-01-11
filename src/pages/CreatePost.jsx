@@ -11,7 +11,7 @@ const CreatePost = () => {
   const navigate = useNavigate();
   const [form, steForm] = useState({
     name: "",
-    promt: "",
+    prompt: "",
     photo: "",
   });
   const [generatingImg, setGeneretingImg] = useState(false);
@@ -27,12 +27,42 @@ const CreatePost = () => {
   };
 
   const handelSurpriseMe = () => {
-    const randomPromt = getRandompromt(form.promt);
-    steForm({ ...form, promt: randomPromt });
+    const randomPromt = getRandompromt(form.prompt);
+    steForm({ ...form, prompt: randomPromt });
   };
 
-  const generateImage = () => {
-    console.log("Generate Image Clicked");
+  const generateImage =  async () => {
+    if (form.prompt) {
+      try {
+        setGeneretingImg(true);
+          setLoading(true); // Set loading state to true while generating
+          const response = await fetch('http://localhost:8000/api/v1/dalle', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ prompt: form.prompt }), // Send prompt to backend
+          });
+
+          if (response.ok) {
+              // If the response is successful, parse JSON and update the state
+              const data = await response.json();
+              steForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
+          } else {
+              // If there's an error, parse the JSON error message and show it to the user
+              const errorData = await response.json();
+              alert(errorData.error || "An unexpected error occurred.");
+          }
+      } catch (error) {
+          console.log(error);
+          alert("Error generating image");
+      } finally {
+        setGeneretingImg(false);
+          setLoading(false); // Set loading state back to false
+      }
+  } else {
+      alert('Please enter a prompt');
+  }
   };
 
   return (
@@ -62,7 +92,7 @@ const CreatePost = () => {
             type="text"
             name="promt"
             placeholder="Enter your Imagination Prompt"
-            value={form.promt}
+            value={form.prompt}
             handelChange={handelChange}
             isSurpriseMe
             handelSurpriseMe={handelSurpriseMe}
@@ -95,7 +125,7 @@ const CreatePost = () => {
             {form?.photo ? (
               <img
                 src={form?.photo}
-                alt={form?.promt}
+                alt={form?.prompt}
                 className="w-full h-full object-contain"
               />
             ) : (
