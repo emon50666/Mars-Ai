@@ -4,7 +4,7 @@ import horror from '../assets/image/horror.png';
 const PostBanner = () => {
     return (
         <div
-            className="  w-full min-h-44 lg:min-h-80 object-cover bg-cover  bg-center justify-center flex items-center"
+            className="  w-full min-h-44 lg:min-h-60 object-cover bg-cover  bg-center justify-center flex items-center"
             style={{
                 backgroundImage: `url(${horror})`,
             }}

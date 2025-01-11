@@ -88,7 +88,7 @@ const CreatePost = () => {
         </form>
         
 
-        {/* Right Section: Image Preview and Buttons */}
+        {/* Right Section: Image Preview and Button */}
         <div className="flex flex-col items-center gap-6 w-full md:w-1/2">
           {/* Image Preview */}
           <div className="relative border border-dotted border-gray-300 rounded-md w-full max-w-md h-64 flex items-center justify-center">
